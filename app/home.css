@@ -7,23 +7,18 @@
 }
 
 .merch-card {
-    width: 80vw;
     height: 50vh;
     display: flex;
     backdrop-filter: blur(15px);
     border-radius: 23px;
     background: blur(16px);
-    border: solid #19191971 3px;
+    /* border: solid #19191971 3px; */
     transition: ease-in-out .3s;
     align-items: center;
     justify-content: center;
     display: flex;
     flex-direction: column;
-    padding: 10vw;
-}
-
-.merch-card:hover {
-    border: solid #191919 3px;
+    padding: 20px;
 }
 
 .merch-title {
@@ -40,14 +35,12 @@
 }
 
 .bio-card {
-    border: solid #19191971 3px;
-    width: 80vw;
-    height: 50vh;
+    width: 100vw;
+    height: 60vh;
     display: flex;
     backdrop-filter: blur(15px);
     border-radius: 23px;
     background: blur(16px);
-    /* box-shadow: rgba(0, 0, 0, .2) 5px 5px 5px 5px; */
     transition: ease-in-out .2s;
     align-items: center;
     justify-content: center;
@@ -57,11 +50,29 @@
 }
 
 .bio-title {
-    font-size: 2rem;
+    font-size: 1.75rem;
 }
 
 .bio-description {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+}
+
+.socials {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.faicon {
+    font-size: 2rem;
+    opacity: 80%;
+}
+
+.faicon:hover {
+    opacity: 100%;
 }
 
 /* FOR DESKTOPS */
@@ -69,6 +80,10 @@
     .merch-card {
         width: 30vw;
         padding: 5vw;
+    }
+
+    .bio-card {
+        width: 70vw;
     }
     
 }
