@@ -1,3 +1,9 @@
+.admin-page {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 .login-form {
     gap: 20px;
     display: flex;
@@ -9,4 +15,28 @@
 
 .login-label {
     margin-right: 20px;
+}
+
+.admin-page {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+
+.admin-button {
+    background-color: gray;
+}
+.admin-button:hover {
+    cursor: pointer;
+}
+
+.admin-input {
+    padding: 10px;
+    border: solid black 3px;
+    width: 500px;
+}
+
+.update-form {
+    display: flex;
+    gap: 20px;
 }

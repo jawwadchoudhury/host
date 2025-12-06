@@ -24,3 +24,8 @@ export async function login(prevState: any, formData: FormData) {
     return { error: 'Incorrect username/password' }
   }
 }
+export async function logout() {
+  const cookieStore = await cookies();
+  cookieStore.delete('auth_token');
+  redirect('/admin/dashboard');
+}
