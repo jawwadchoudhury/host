@@ -3,6 +3,7 @@ import LoginForm from './loginForm';
 import { logout } from './login';
 import { createClient } from '@vercel/edge-config';
 import { updateDatabase } from './actions';
+import Link from 'next/link';
 
 export default async function Admin() {
     const cookieStore = await cookies();
@@ -18,7 +19,7 @@ export default async function Admin() {
     <div className='admin-page'>
         <p>Welcome to the admin menu!</p>
         <button onClick={logout} className='admin-button'>Logout</button>
-
+        <Link href='/' className='admin-button'>Return home</Link>
         {/* Header Video Playback ID */}
         <form action={updateDatabase} className='update-form'>
             <label>header-video-playback-id</label>
@@ -177,6 +178,34 @@ export default async function Admin() {
                 name="value" 
                 type="text" 
                 defaultValue={await config.get("spotify-url") || ''}
+                className='admin-input'
+            />
+            <button type="submit" className='admin-button'>
+                Update
+            </button>
+        </form>
+
+        <form action={updateDatabase} className='update-form'>
+            <label>soundcloud-url</label>
+            <input name="key" type="hidden" value={'soundcloud-url'}/>
+            <input 
+                name="value" 
+                type="text" 
+                defaultValue={await config.get("soundcloud-url") || ''}
+                className='admin-input'
+            />
+            <button type="submit" className='admin-button'>
+                Update
+            </button>
+        </form>
+
+        <form action={updateDatabase} className='update-form'>
+            <label>bio-carousel-count</label>
+            <input name="key" type="hidden" value={'bio-carousel-count'}/>
+            <input 
+                name="value" 
+                type="text" 
+                defaultValue={await config.get("bio-carousel-count") || ''}
                 className='admin-input'
             />
             <button type="submit" className='admin-button'>

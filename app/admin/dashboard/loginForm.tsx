@@ -4,6 +4,7 @@ import './admin.css';
 import { useActionState } from 'react';
 import { login } from './login';
 import Form from 'next/form';
+import Link from 'next/link';
 
 export default function LoginForm() {
     // This hook captures the return value of 'login' into 'state'
@@ -26,6 +27,7 @@ export default function LoginForm() {
             <button type="submit" disabled={isPending}>
                 {isPending ? 'Logging in...' : 'Log in'}
             </button>
+            <Link href={'/'}>Home</Link>
         </Form>
     );
 }

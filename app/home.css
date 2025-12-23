@@ -60,7 +60,7 @@
 }
 
 .socials {
-    height: 100vh;
+    height: 95vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -71,12 +71,30 @@
 .faicon {
     font-size: 2rem;
     opacity: 80%;
+    transition: ease-in-out .3s;
 }
 
 .faicon:hover {
     opacity: 100%;
 }
 
+.footer {
+    width: 100%;
+    height: 5vh;
+    text-align: center;
+    font-size: 1.5vh;
+}
+
+.jawwad-link {
+    text-decoration: underline;
+}
+
+.carousel-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 /* FOR DESKTOPS */
 @media screen and (min-width: 1200px) {
     .merch-card {
