@@ -42,7 +42,7 @@ export default async function Home() {
             <CarouselContent>
               {Array.from({ length: Number(bioCarouselCount!) }).map((_, index) => (
                 <CarouselItem key={index} className="carousel-item">
-                  <Image alt="Promo Image" src={`/bio-images/image${index + 1}.jpg`} width={250} height={100}/>
+                  <Image alt="Promo Image" src={`/bio-images/image_${index + 1}.jpg`} width={250} height={100}/>
                 </CarouselItem>
               ))}
             </CarouselContent>
